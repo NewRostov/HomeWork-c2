@@ -4,7 +4,13 @@
 //782 -> 8
 //918 -> 1
 
-Console.WriteLine("Введите целое трехзначное число: ");
-int number = Convert.ToInt32(Console.ReadLine());
-if (number < 99 || number > 999 ) Console.WriteLine("Вы ввели не целое трехзначное число");
-else Console.WriteLine( (number % 100 - number % 10)/10 );
+internal partial class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Введите целое трехзначное число: ");
+        int number = Convert.ToInt32(Console.ReadLine());
+        if (number < 99 || number > 999) Console.WriteLine("Вы ввели не целое трехзначное число");
+        else Console.WriteLine("Вторая цифра равна: " + (number % 100 - number % 10) / 10);
+    }
+}
